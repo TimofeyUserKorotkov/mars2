@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <h2 align=left>Список профессий</h2>
 {% if lst == 'ol' %}
-<ol padding-left: 40px>
+<ol style="padding-left: 40px">
     {% for item in professions %}
     <li>{{ item }}</li>
     {% endfor %}
 </ol>
 {% elif lst == 'ul' %}
-<ul padding-left: 40px>
+<ul style="padding-left: 40px">
     {% for item in professions %}
     <li>{{ item }}</li>
     {% endfor %}
