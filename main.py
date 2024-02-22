@@ -15,11 +15,12 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Доступ')
 
 
-@app.route("/login", method=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        return redirect("/succes")
+        return redirect("/success")
+    return render_template("login.html", title='Аварийный доступ', form=form)
 
 
 @app.route("/")
